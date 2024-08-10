@@ -1,0 +1,47 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+.top-left, .top-right, .bottom-left, .bottom-right {
+  border: 1px solid black;
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-left, .top-right {
+  grid-row: 1;
+}
+
+.bottom-left, .bottom-right {
+  grid-row: 2;
+}
+
+.top-left, .bottom-left {
+  grid-column: 1;
+}
+
+.top-right, .bottom-right {
+  grid-column: 2;
+}
+
+#inputField {
+  width: calc(100% - 80px);
+  margin-right: 10px;
+}
+
+#submitButton {
+  width: 70px;
+}
